@@ -1,4 +1,4 @@
-module TypeX
+module TypeIRC
 
 go 1.18
 

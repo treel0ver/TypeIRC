@@ -1,3 +1,5 @@
+// main.go
+
 package main
 
 import (
@@ -5,6 +7,7 @@ import (
 	"fmt"
 
 	irc "github.com/thoj/go-ircevent"
+	// Import your typingtest package
 )
 
 func main() {

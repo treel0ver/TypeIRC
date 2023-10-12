@@ -1,4 +1,4 @@
-package main
+package typingtest
 
 import (
 	"fmt"
@@ -6,8 +6,6 @@ import (
 
 	irc "github.com/thoj/go-ircevent"
 )
-
-// BEGIN to be continued
 
 var texts = []string{"hehe", "123"}
 
@@ -20,7 +18,5 @@ type test struct {
 }
 
 func start_test(channel string, ircConn *irc.Connection, test *test) {
-	ircConn.Privmsg(channel, fmt.Sprintf("textID: %d sender: %s ", test.textID, test.sender))
+	ircConn.Privmsg(channel, fmt.Sprintf("textID: %d sender: %s", test.textID, test.sender))
 }
-
-// END to be continued

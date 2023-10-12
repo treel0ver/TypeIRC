@@ -1,3 +1,5 @@
+// messageparser.go
+
 package main
 
 import (
@@ -51,7 +53,7 @@ func (mp *MessageParser) ParseMessage(ircConn *irc.Connection, channel string, m
 
 	if strings.HasPrefix(message, ".ts") {
 		rand.Seed(time.Now().UnixNano())
-		test := test{
+		newtest := typingtest.test{
 			textID:         rand.Intn(2),
 			channel:        channel,
 			sender:         sender,
@@ -59,7 +61,7 @@ func (mp *MessageParser) ParseMessage(ircConn *irc.Connection, channel string, m
 			users_finished: []string{""},
 		}
 		go func() {
-			start_test(channel, ircConn, &test)
+			typingtest.start_test(channel, ircConn, &newtest)
 		}()
 	}
 }
